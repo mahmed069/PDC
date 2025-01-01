@@ -94,208 +94,190 @@ The producer creates items, and the consumer processes them, ensuring synchroniz
 ### Summary:
 Two threads add and remove items from a shared resource safely, demonstrating the use of RLock for synchronization.
 
----
+## Code 7: Basic Multithreading
 
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
-2. Run each Python file individually to see the threading examples in action:
-   ```bash
-   python code1.py
-   python code2.py
-   # ...and so on
-   ```
+Working
 
-Code 7: Basic Multi-threading
+Thread Class: Extends the Thread class and defines the run method.
 
-Functionality:
+Thread Behavior:
+
+Prints the thread name and process ID (os.getpid()).
+
+Sleeps for a random duration (1-10 seconds).
+
+Prints a completion message.
+
+Execution:
+
+Creates nine threads with random durations.
+
+Starts all threads using start().
+
+Waits for all threads to finish using join().
+
+Result
+
+All threads run simultaneously with random durations.
+
+Total execution time is printed after all threads complete.
+
+Summary
+
+This program demonstrates how to create and run multiple threads simultaneously and measure the total execution time.
+
+## Code 8: Multithreading with Locks
+
+Working
+
+Lock Usage:
+
+Threads acquire a lock (threadLock) before printing and release it after finishing.
+
+Thread Behavior:
+
+Prints the thread name and process ID after acquiring the lock.
+
+Sleeps for a random duration (1-10 seconds).
+
+Releases the lock after finishing.
+
+Execution:
 
 Creates and starts nine threads.
 
-Each thread performs the following tasks:
+Ensures only one thread prints at a time using the lock.
 
-Prints its name.
+Result
 
-Displays the process ID.
+Threads execute one at a time for printing but run independently for other tasks.
 
-Sleeps for a random duration between 1 to 10 seconds.
+Total execution time is printed.
 
-Prints when it finishes.
+Summary
 
-Working:
+This program ensures synchronized output by using locks to control access to shared resources (printing).
 
-Thread Creation: Nine threads are created with random durations.
+## Code 9: Mixed Lock Management
 
-Thread Execution: Threads start simultaneously using start().
+Working
 
-Thread Synchronization: The program waits for each thread to finish using join().
+Modified Lock Usage:
 
-Execution Time: The total execution time is calculated and displayed.
+Threads acquire a lock only for printing and release it immediately after.
 
-Result:
+The sleep operation is independent of the lock.
 
-Threads run in parallel with random durations.
+Thread Behavior:
 
-The program outputs thread details and total execution time.
+Acquires the lock to print its details.
 
-Code 8: Multi-threading with Locks
+Sleeps for a random duration (1-10 seconds).
 
-Functionality:
+Releases the lock after printing.
 
-Introduces a lock to synchronize threads.
+Result
 
-Ensures only one thread can print at a time.
+Threads print their details sequentially but run independently for other tasks.
 
-Working:
+Total execution time is printed.
 
-A threading.Lock is used to control access to the printing operation.
+Summary
 
-Threads acquire the lock before printing and release it after printing.
+This program uses locks to control access to printing while allowing threads to run independently for other operations.
 
-The rest of the execution is similar to Code 7.
+## Code 10: Producer-Consumer with Events
 
-Result:
-
-Threads run one by one for printing, ensuring no overlap in output.
-
-Total execution time is displayed.
-
-Code 9: Lock with Independent Execution
-
-Functionality:
-
-Threads acquire a lock to print their details but release it immediately for parallel execution.
-
-Working:
-
-Each thread acquires a lock to print its name and process ID, then releases the lock.
-
-After releasing the lock, the thread sleeps for a random duration and prints its completion message.
-
-The rest of the flow is similar to Code 7.
-
-Result:
-
-Threads execute in parallel but take turns for printing.
-
-Outputs thread details and total execution time.
-
-Code 10: Producer-Consumer Using Events
-
-Functionality:
-
-Implements producer-consumer synchronization using threading.Event.
-
-The producer generates items, and the consumer removes them.
-
-Working:
+Working
 
 Producer:
 
-Generates random numbers and appends them to a list.
+Generates random items and adds them to a shared list.
 
-Signals the consumer using event.set().
+Signals the consumer using an event after adding each item.
 
 Clears the event after signaling.
 
 Consumer:
 
-Waits for the event signal.
+Waits for the event to be set by the producer.
 
-Pops an item from the list when notified.
+Pops an item from the list after the event is set.
 
-Synchronization is managed through events to ensure smooth communication.
+Execution:
 
-Result:
+Both threads run and coordinate using the Event object.
 
-The producer adds items, and the consumer removes them in a synchronized manner.
+Result
 
-Logs each action and ensures proper coordination.
+Producer adds items to the list, and the consumer removes them in a synchronized manner.
 
-Code 11: Producer-Consumer Using Condition Variables
-
-Functionality:
-
-Implements producer-consumer synchronization using threading.Condition.
-
-Working:
-
-Producer:
-
-Adds items to a list until the limit of 10 is reached.
-
-Waits when the list is full.
-
-Consumer:
-
-Removes items from the list.
-
-Waits when the list is empty.
-
-Both threads use condition.notify() to wake each other when appropriate.
-
-Result:
-
-Ensures the producer does not exceed the limit and the consumer does not act on an empty list.
-
-Logs the producer-consumer interaction with precise synchronization.
-
-Code 12: Barrier Synchronization
-
-Functionality:
-
-Simulates a race with three runners using a threading.Barrier.
-
-All runners must reach a barrier before proceeding.
-
-Working:
-
-A Barrier is set for three runners.
-
-Each runner:
-
-Sleeps for a random duration.
-
-Prints its arrival at the barrier.
-
-The barrier waits until all runners arrive.
-
-After crossing the barrier, the program concludes the race.
-
-Result:
-
-Threads synchronize at the barrier before continuing.
-
-Simulates a race with synchronized execution.
+Both threads work together using events to manage coordination.
 
 Summary
 
-Code 7-9: Demonstrate thread creation, execution, and synchronization using locks.
+This program demonstrates producer-consumer synchronization using the Event class.
 
-Code 10: Explores event-based synchronization for producer-consumer problems.
+## Code 11: Producer-Consumer with Conditions
 
-Code 11: Implements condition variables for producer-consumer coordination.
+Working
 
-Code 12: Uses barriers for thread synchronization in a race simulation.
+Condition Object:
 
-These programs provide a comprehensive introduction to multi-threading concepts in Python, demonstrating their use in real-world scenarios.
+Ensures proper synchronization between the producer and consumer.
 
-How to Run
+Producer:
 
-Clone the repository:
+Adds items to a shared list up to a limit (10 items).
 
-git clone <repository-url>
-cd <repository-folder>
+Waits if the list is full.
 
-Run each Python file individually to see the threading examples in action:
+Consumer:
 
-python code7.py
-python code8.py
-# ...and so on
+Removes items from the shared list.
 
-License
+Waits if the list is empty.
 
-This repository is open-source and available under the MIT License.
+Coordination:
+
+Uses condition.wait() and condition.notify() for synchronization.
+
+Result
+
+Producer and consumer operate without conflicts.
+
+Producer pauses when the list is full, and the consumer waits when the list is empty.
+
+Summary
+
+This program implements producer-consumer synchronization using a condition variable to manage shared resources.
+
+## Code 12: Race Simulation with Barriers
+
+Working
+
+Barrier:
+
+Ensures all threads (runners) reach the barrier before proceeding.
+
+Runner:
+
+Each runner sleeps for a random time (2-5 seconds).
+
+Prints a message upon reaching the barrier.
+
+Execution:
+
+Creates threads for runners.
+
+Waits for all runners to reach the barrier before continuing.
+
+Result
+
+All runners wait at the barrier until everyone arrives.
+
+The race finishes after all runners proceed past the barrier.
+
+Summary
+
+This program demonstrates thread synchronization using a Barrier to coordinate the progress of multiple threads.
