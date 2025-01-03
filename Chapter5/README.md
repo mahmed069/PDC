@@ -87,3 +87,19 @@ Key Features:
 2. Run the scripts using:
    ```bash
    python script_name.py
+
+
+
+
+## 4. Requirements
+
+    Python 3.x
+    Libraries:
+        asyncio
+        concurrent.futures
+        random
+        time
+
+## 5. License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
