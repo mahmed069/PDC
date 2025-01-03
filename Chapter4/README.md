@@ -63,3 +63,33 @@ Key Features:
 1. Install `mpi4py`:
    ```bash
    pip install mpi4py
+
+
+## Requirements
+
+    Python 3.x
+    mpi4py library
+    MPI implementation (e.g., OpenMPI, MPICH)
+
+## Concepts Demonstrated
+
+    Point-to-Point Communication: Direct data exchange between processes.
+    Collective Communication: Operations that involve all processes in a communicator, such as broadcast, scatter, and gather.
+    Process Synchronization: Using comm.Barrier() to ensure processes are synchronized.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/f4a4b69f-b979-433f-9b44-2bf81548a1fc)
+
+![image](https://github.com/user-attachments/assets/1050968d-9b8f-4d9b-9527-f96e4a54fd07)
+
+![image](https://github.com/user-attachments/assets/bf8f7dd3-a967-45b2-9771-e2451de4bc38)
+
+![image](https://github.com/user-attachments/assets/c8ced7c9-4aa5-4750-bbce-794db4788611)
