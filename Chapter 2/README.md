@@ -163,3 +163,18 @@ pip install numpy numba mpi4py
 
 ## License
 This repository is licensed under the MIT License. Feel free to use and modify the code.
+
+
+
+![image](https://github.com/user-attachments/assets/a3de4947-d933-4b97-b4b1-6fc5f9e23c24)
+
+![image](https://github.com/user-attachments/assets/e5ee6406-d1eb-480c-8c32-dadc00a0c26c)
+
+![image](https://github.com/user-attachments/assets/3aabe744-614f-4f15-b942-44de8a813032)
+
+![image](https://github.com/user-attachments/assets/6e64fd62-4657-4a1f-8f85-5883b9cca0f4)
+
+![image](https://github.com/user-attachments/assets/28d44586-724d-4888-9fab-103d2d51b6a7)
+
+![image](https://github.com/user-attachments/assets/7b81d051-8f7e-4df1-8b57-8d427e7298cd)
+
