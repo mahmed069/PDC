@@ -13,9 +13,8 @@ This repository contains examples demonstrating the use of Python's `asyncio` li
 2. [Multithreading and Multiprocessing](#2-multithreading-and-multiprocessing)
    - [Thread Pool Executor](#thread-pool-executor)
    - [Process Pool Executor](#process-pool-executor)
-3. [How to Run the Examples](#3-how-to-run-the-examples)
-4. [Requirements](#4-requirements)
-5. [License](#5-license)
+3. [Requirements](#4-requirements)
+4. [License](#5-license)
 
 ---
 
@@ -81,17 +80,10 @@ Key Features:
 
 ---
 
-## 3. How to Run the Examples
-
-1. Install Python 3.x (if not already installed).
-2. Run the scripts using:
-   ```bash
-   python script_name.py
 
 
 
-
-## 4. Requirements
+## 3. Requirements
 
     Python 3.x
     Libraries:
@@ -100,6 +92,6 @@ Key Features:
         random
         time
 
-## 5. License
+## 4. License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
