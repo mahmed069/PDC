@@ -109,3 +109,15 @@ Key Features:
    ```bash
    git clone https://github.com/mahmed069/multiprocessing-s.git
    cd multiprocessing
+
+
+
+![image](https://github.com/user-attachments/assets/6f8f6e54-3a6f-4de3-a4a1-ec3cc9e457a0)
+
+![image](https://github.com/user-attachments/assets/863a0e08-4cdb-4720-ba7c-2f011a3c2fa2)
+
+![image](https://github.com/user-attachments/assets/67c0e1cf-0b80-4be9-a0cb-f0d067e4ba27)
+
+![image](https://github.com/user-attachments/assets/2ded58ec-6143-4020-a250-b60ebde2b125)
+
+![image](https://github.com/user-attachments/assets/5639ada3-5005-4a91-a643-e9251ed0b505)
