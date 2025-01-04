@@ -4,20 +4,6 @@ This repository contains examples demonstrating the use of Python's `asyncio` li
 
 ---
 
-## Table of Contents
-
-1. [Asyncio Coroutine Examples](#1-asyncio-coroutine-examples)
-   - [Basic Coroutines](#basic-coroutines)
-   - [Finite State Machine](#finite-state-machine)
-   - [Parallel Computation with Asyncio](#parallel-computation-with-asyncio)
-2. [Multithreading and Multiprocessing](#2-multithreading-and-multiprocessing)
-   - [Thread Pool Executor](#thread-pool-executor)
-   - [Process Pool Executor](#process-pool-executor)
-3. [Requirements](#4-requirements)
-4. [License](#5-license)
-
----
-
 ## 1. Asyncio Coroutine Examples
 
 ### Basic Coroutines
