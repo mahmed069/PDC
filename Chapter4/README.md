@@ -4,15 +4,6 @@ This repository contains Python scripts that demonstrate parallel programming us
 
 ---
 
-## Table of Contents
-
-1. [Point-to-Point Communication](#1-point-to-point-communication)
-2. [Broadcast Communication](#2-broadcast-communication)
-3. [Scatter Communication](#3-scatter-communication)
-4. [Gather Communication](#4-gather-communication)
-
----
-
 ### 1. Point-to-Point Communication
 
 **File**: `point_to_point.py`  
